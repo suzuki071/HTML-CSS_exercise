@@ -4,69 +4,80 @@
   box-sizing: border-box;
 }
 
-/* header */
-.header {
+.header-line {
   width: 100%;
-  padding: 30px 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: plum;
+  height: 50px;
+  background-color: #ff9a4b;
 }
 
-.header > div {
-  background-color: pink;
-  height: 70px;
-  flex-basis: 140px;
-  margin: 0 10px;
-}
-
-.header > :first-child {
-  margin-right: auto;
-}
-
-/* main */
 .main {
-  width: 1000px;
-  margin: 0 auto;
-  background-color: greenyellow;
+  width: 960px;
+  margin: 50px auto;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .box {
-  max-width: 700px;
-  flex-grow: 1;
-  padding: 20px;
-  background-color: green;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  width: 300px;
+  margin-right: 30px;
+  background-color: #eeeeee;
+  padding: 10px;
+  position: relative;
 }
 
-.box > div {
-  height: 130px;
-  flex-basis: 200px;
-  margin: 10px;
-  background-color: yellow;
+.box:nth-child(3) {
+  margin-right: 0;
 }
 
-/* footer */
-.footer {
-  width: 100%;
-  padding: 20px;
-  background-color: blue;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
+.image1 {
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-size: cover;
+  background-position: bottom;
 }
 
-.footer > div {
-  height: 40px;
-  flex-basis: 45%;
-  max-width: 600px;
-  margin: 10px;
-  background-color: skyblue;
+.image2 {
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.image3 {
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.step-num {
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff9a4b;
+  color: #fff;
+}
+
+.main-title {
+  margin: 15px 0 5px;
+}
+
+footer {
+  height: 50px;
+  background-color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    width: 100%;
+    display: block;
+  }
+
+  .box {
+    margin: 30px auto;
+  }
+
+  .box:nth-child(3) {
+    margin: 0 auto;
+  }
 }
